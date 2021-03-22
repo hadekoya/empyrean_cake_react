@@ -5,6 +5,7 @@ import { Container, Navbar, NavbarBrand } from "reactstrap";
 import Header from "./HeaderComponent";
 import Footer from "./FooterComponent";
 import Home from "./HomepageComponent";
+import Contact from "./ContactComponent";
 import Appointment from "./AppointmentComponent";
 
 // import Contact from "./ContactComponent";
@@ -65,13 +66,15 @@ class Main extends Component {
           <Route path="/home" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/appointment" component={Appointment} />
+          <Route path="/contact" component={Contact} />
+
          {/*   <Route
             exact
             path="/directory"
             render={() => <Directory campsites={this.props.campsites} />}
           />
-          <Route path="/directory/:campsiteId" component={CampsiteWithId} />
-          <Route exact path="/contactus" component={Contact} />
+          <Route path="/directory/:campcontactussiteId" component={CampsiteWithId} />
+          <Route exact path="/" component={Contact} />
           <Route
             exact
             path="/aboutus"
