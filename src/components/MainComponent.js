@@ -7,11 +7,11 @@ import Footer from "./FooterComponent";
 import Home from "./HomepageComponent";
 import Contact from "./ContactComponent";
 import Appointment from "./AppointmentComponent";
-
-// import Contact from "./ContactComponent";
 import About from "./AboutComponent";
 
 import { CAKES } from "../shared/products";
+import { ABOUTCAMPAIGN } from "../shared/about";
+import { FEATURECAMPAIGN } from "../shared/featurecakes";
 
  import { Switch, Route, Redirect, withRouter } from "react-router-dom";
 // import { connect } from "react-redux";
@@ -28,7 +28,16 @@ class Main extends Component {
   //   onCampsiteSelect(campsiteId) {
   //     this.setState({ selectedCampsite: campsiteId });
   //   }
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      cakes: CAKES,
+      feature: FEATURECAMPAIGN,
+      about: ABOUTCAMPAIGN,
+      
+      //selectedCampsite: null,
+    };
+  }
   render() {
     // const HomePage = () => {
     //   return (
@@ -64,9 +73,14 @@ class Main extends Component {
         <Header />
        <Switch>
           <Route path="/home" component={Home} />
-          <Route path="/about" component={About} />
+          {/* <Route path="/about" component={About} /> */}
           <Route path="/appointment" component={Appointment} />
           <Route path="/contact" component={Contact} />
+            <Route
+            exact
+            path="/about"
+            render={() => <About about={this.state.about} />}
+          />
 
          {/*   <Route
             exact
