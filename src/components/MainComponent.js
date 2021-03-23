@@ -72,14 +72,19 @@ class Main extends Component {
       <div>
         <Header />
        <Switch>
-          <Route path="/home" component={Home} />
+          {/* <Route path="/home" component={Home} /> */}
           {/* <Route path="/about" component={About} /> */}
           <Route path="/appointment" component={Appointment} />
           <Route path="/contact" component={Contact} />
             <Route
             exact
             path="/about"
-            render={() => <About about={this.state.about} />}
+            render={() => <About about={this.state.about} title="About us" />}
+          />
+          <Route
+            exact
+            path="/home"
+            render={() => <Home feature={this.state.feature} title="" />}
           />
 
          {/*   <Route

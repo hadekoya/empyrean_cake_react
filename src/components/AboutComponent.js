@@ -11,6 +11,7 @@ import {
   NavLink,
   Button,
 } from "reactstrap";
+import RenderCampaign from "./RenderCampaignComponent";
 
 
 class About extends Component {
@@ -19,29 +20,10 @@ class About extends Component {
   }
 
   render() {
-    var rows = [];
-      console.log(this.props);
-    console.log(this.props.about.length);
-    for (var i = 0; i < this.props.about.length; i++) {
-        rows.push(
-        <div key={this.props.about[i].id} className="row row-content p-3">
-            <div className="col-sm-1 d-md-block"></div>
-            <div class="col-sm-6"><span>{this.props.about[i].description} </span></div>
-            <div class="col-sm-5">
-                <img src={this.props.about[i].image} class="img-fluid rounded d-block w-100"/>
-            </div>
-        </div>
-        );
-    }
 
     return (
     <React.Fragment>
-            <div className="row row-content p-3">
-            <div className="col offset-1">
-                <h2>About us</h2>
-            </div>
-        </div>
-        {rows}
+        <RenderCampaign campaign={this.props.about} title={this.props.title}/>
     </React.Fragment>
     );
   }
@@ -75,3 +57,22 @@ export default About;
       </div>
         </React.Fragment>
  */
+
+//   var rows = [];
+
+//     rows.push(<div className="row row-content p-3">
+//         <div className="col offset-1">
+//             <h2>{this.props.title}</h2>
+//         </div>
+//     </div>);
+//     for (var i = 0; i < this.props.about.length; i++) {
+//         rows.push(
+//         <div key={this.props.about[i].id} className="row row-content p-3">
+//             <div className="col-sm-1 d-md-block"></div>
+//             <div class="col-sm-6"><span>{this.props.about[i].description} </span></div>
+//             <div class="col-sm-5">
+//                 <img src={this.props.about[i].image} class="img-fluid rounded d-block w-100"/>
+//             </div>
+//         </div>
+//         );
+//     }

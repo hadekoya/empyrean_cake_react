@@ -11,7 +11,7 @@ import {
   NavLink,
   Button,
 } from "reactstrap";
-
+import RenderCampaign from "./RenderCampaignComponent";
 
 class Homepage extends Component {
   constructor(props) {
@@ -87,8 +87,14 @@ class Homepage extends Component {
           <div className="col-md-1"></div>
         </div>
       </div>
+      <RenderCampaign campaign={this.props.feature} title={this.props.title}/>
+       </React.Fragment>
+    );
+  }
+}
+export default Homepage;
 
-      <div className="row row-content p-3">
+{/* <div className="row row-content p-3">
         <div className="col-5 offset-1">
           <h2>Birthdays</h2>
            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem accusantium commodi dicta maiores maxime reiciendis quia voluptatem ipsam facere laborum fugiat aperiam assumenda tempore temporibus cum accusamus eligendi, consequatur beatae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores non repellat ad repellendus. Eaque blanditiis inventore totam veritatis, reprehenderit dignissimos fugiat? Soluta, fugiat in! Molestiae non repudiandae aut. Et, earum. Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -101,8 +107,4 @@ class Homepage extends Component {
 
 
       <div className="row row-content p-3"><div className="col-5 offset-1"><img src="/assets/images/wedding-cake.png" className="img-fluid rounded d-block w-100"/></div><div className="col-5"><h2>Weddings</h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem accusantium commodi dicta maiores maxime reiciendis quia voluptatem ipsam facere laborum fugiat aperiam assumenda tempore temporibus cum accusamus eligendi, consequatur beatae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores non repellat ad repellendus. Eaque blanditiis inventore totam veritatis, reprehenderit dignissimos fugiat? Soluta, fugiat in! Molestiae non repudiandae aut. Et, earum. Lorem ipsum dolor sit amet consectetur adipisicing elit.</div><div className="col"></div></div>
-   </React.Fragment>
-    );
-  }
-}
-export default Homepage;
+   */}
