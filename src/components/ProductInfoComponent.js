@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import {
   Card,
   CardImg,
@@ -6,11 +6,6 @@ import {
   CardBody,
   Breadcrumb,
   BreadcrumbItem,Badge
-  // Button,
-  // Modal,
-  // ModalHeader,
-  // ModalBody,
-  // Label,
 } from "reactstrap";
 import { Link } from "react-router-dom";
 

@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import {
-  Breadcrumb,
-  BreadcrumbItem,
   Button,
   Form,
   FormGroup,
@@ -10,7 +8,6 @@ import {
   Col,
   FormFeedback,
 } from "reactstrap";
-import { Link } from "react-router-dom";
 
 class Contact extends Component {
   

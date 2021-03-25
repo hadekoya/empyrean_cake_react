@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -16,7 +16,7 @@ function RenderCardItem({ cake }) {
                 /></a>
                 <div className="card-body">
                   <h4 className="card-title">
-                    <a href="#">{cake.name}</a>
+                    {cake.name}
                   </h4>
                   <h5>{cake.price}</h5>
                   <p className="card-text">

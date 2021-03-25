@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import {
   Collapse,
   Navbar,
@@ -8,10 +7,6 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
 } from "reactstrap";
 class Header extends Component {
   constructor(props) {
@@ -20,7 +15,6 @@ class Header extends Component {
     this.toggle = this.toggle.bind(this);
     this.state = {
       isOpen: false,
-      navCollapsed: true,
       showNavbar: false,
     };
   }
@@ -30,7 +24,6 @@ class Header extends Component {
     });
   }
   render() {
-    const { navCollapsed } = this.state;
     return (
       <div>
         <Navbar variant="light" expand="md">

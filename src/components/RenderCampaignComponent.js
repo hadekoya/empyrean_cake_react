@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 
 function RenderCampaign({ campaign, title }) {
     var rows = [];
@@ -15,7 +14,7 @@ function RenderCampaign({ campaign, title }) {
             <div className="col-sm-1 d-md-block"></div>
             <div class="col-sm-6"><span>{campaign[i].description} </span></div>
             <div class="col-sm-5">
-                <img src={campaign[i].image} class="img-fluid rounded d-block w-100"/>
+                <img src={campaign[i].image} alt={campaign[i].id} class="img-fluid rounded d-block w-100"/>
             </div>
         </div>
         );
