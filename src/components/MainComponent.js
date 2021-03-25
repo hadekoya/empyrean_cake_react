@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container, Navbar, NavbarBrand } from "reactstrap";
-// import Directory from "./DirectoryComponent";
-// import CampsiteInfo from "./CampsiteInfoComponent";
+import ServiceCatalog from "./ServiceCatalogComponent";
+import ProductInfo from "./ProductInfoComponent";
 import Header from "./HeaderComponent";
 import Footer from "./FooterComponent";
 import Home from "./HomepageComponent";
@@ -67,7 +67,17 @@ class Main extends Component {
     //     />
     //   );
     // };
-
+    const ProductWithId = ({ match }) => {
+      return (
+          <ProductInfo
+          product={
+            this.state.cakes.filter(
+              (cake) => cake.id === +match.params.productid
+            )[0]
+          }
+        />
+      );
+    };
     return (
       <div>
         <Header />
@@ -86,12 +96,14 @@ class Main extends Component {
             path="/home"
             render={() => <Home feature={this.state.feature} title="" />}
           />
-
-         {/*   <Route
+          <Route
             exact
-            path="/directory"
-            render={() => <Directory campsites={this.props.campsites} />}
+            path="/catalog"
+            render={() => <ServiceCatalog cakes={this.state.cakes} />}
           />
+          <Route path="/catalog/:productid" component={ProductWithId} />
+
+          {/*
           <Route path="/directory/:campcontactussiteId" component={CampsiteWithId} />
           <Route exact path="/" component={Contact} />
           <Route

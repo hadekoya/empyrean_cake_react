@@ -1,16 +1,16 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import {
-  Container,
-  Row,
-  Col,
-  Navbar,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  Button,
-} from "reactstrap";
+// import { Link } from "react-router-dom";
+// import {
+//   Container,
+//   Row,
+//   Col,
+//   Navbar,
+//   NavbarBrand,
+//   Nav,
+//   NavItem,
+//   NavLink,
+//   Button,
+// } from "reactstrap";
 
 
 class Appointment extends Component {
